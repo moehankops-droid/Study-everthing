@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study bot</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #0b0f19;
+            color: #fff;
+            margin: 0;
+            padding: 15px;
+            padding-bottom: 70px;
+        }
+        h1 {
+            font-size: 22px;
+            color: #38bdf8;
+            margin-bottom: 5px;
+        }
+        .subtitle {
+            color: #94a3b8;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        .card {
+            background: #111827;
+            padding: 15px;
+            margin-bottom: 12px;
+            border-radius: 12px;
+            border: 1px solid #1f2937;
+        }
+        h2 {
+            color: #38bdf8;
+            margin-top: 0;
+            font-size: 16px;
+        }
+        .formula {
+            background: #0b0f19;
+            padding: 8px 12px;
+            border-left: 4px solid #38bdf8;
+            font-weight: bold;
+            font-size: 13px;
+            margin: 8px 0;
+            color: #e2e8f0;
+        }
+        .example {
+            color: #9ca3af;
+            font-style: italic;
+            font-size: 13px;
+        }
+        /* Bottom Navigation Bar */
+        .bottom-nav {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: #111827;
+            display: flex;
+            justify-content: space-around;
+            padding: 10px 0;
+            border-top: 1px solid #1f2937;
+        }
+        .nav-item {
+            background: none;
+            border: none;
+            color: #94a3b8;
+            font-size: 12px;
+            font-weight: bold;
+            cursor: pointer;
+            padding: 5px;
+        }
+        .nav-item.active {
+            color: #38bdf8;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Study bot</h1>
+    <div class="subtitle">Study bot</div>
+
+    <!-- Home Tab -->
+    <div id="home" class="tab-content active">
+        <div class="card">
+            <h2>🏠 Home</h2>
+            <p>အင်္ဂလိပ်စာ Basic Tenses များကို လေ့လာရန် အောက်ပါ <b>Tense</b> ကို နှိပ်ပါ။</p>
+        </div>
+    </div>
+
+    <!-- Tense Tab -->
+    <div id="tense" class="tab-content">
+        <h2>📚 English Basic Tenses</h2>
+        
+        <div class="card">
+            <h2>1. Present Simple Tense</h2>
+            <p>အမြဲလုပ်လေ့ရှိသော၊ သဘာဝအတိုင်းဖြစ်ပျက်သော အရာများ။</p>
+            <div class="formula">Subject + V1 (s/es) + Object</div>
+            <p class="example">ဥပမာ: She speaks English very well.</p>
+        </div>
+
+        <div class="card">
+            <h2>2. Past Simple Tense</h2>
+            <p>အတိတ်ကာလက ဖြစ်ပျက်ပြီးဆုံးသွားသော အလုပ်များ။</p>
+            <div class="formula">Subject + V2 + Object</div>
+            <p class="example">ဥပမာ: He went to school yesterday.</p>
+        </div>
+
+        <div class="card">
+            <h2>3. Future Simple Tense</h2>
+            <p>အနာဂတ်တွင် ဖြစ်လာမည့် အရာများ။</p>
+            <div class="formula">Subject + will + V1 + Object</div>
+            <p class="example">ဥပမာ: I will study English tomorrow.</p>
+        </div>
+
+        <div class="card">
+            <h2>4. Present Continuous Tense</h2>
+            <p>ယခုလက်ရှိ ဖြစ်ဆဲဖြစ်သော အလုပ်များ။</p>
+            <div class="formula">Subject + is/am/are + V(ing) + Object</div>
+            <p class="example">ဥပမာ: They are playing football now.</p>
+        </div>
+
+        <div class="card">
+            <h2>5. Past Continuous Tense</h2>
+            <p>အတိတ်တွင် အချိန်တစ်ခုခု၌ ဖြစ်ဆဲဖြစ်သော အရာများ။</p>
+            <div class="formula">Subject + was/were + V(ing) + Object</div>
+            <p class="example">ဥပမာ: I was reading a book yesterday.</p>
+        </div>
+
+        <div class="card">
+            <h2>6. Future Continuous Tense</h2>
+            <p>အနာဂတ်တွင် ဆက်လက်ဖြစ်ပွားနေမည့် အလုပ်များ။</p>
+            <div class="formula">Subject + will be + V(ing) + Object</div>
+            <p class="example">ဥပမာ: She will be sleeping at this time tomorrow.</p>
+        </div>
+
+        <div class="card">
+            <h2>7. Present Perfect Tense</h2>
+            <p>ယခုတလောမှ ပြီးဆုံးသွားသော လုပ်ရပ်များ။</p>
+            <div class="formula">Subject + has/have + V3 + Object</div>
+            <p class="example">ဥပမာ: I have finished my homework.</p>
+        </div>
+
+        <div class="card">
+            <h2>8. Past Perfect Tense</h2>
+            <p>အတိတ်က အခြားအဖြစ်အပျက်တစ်ခု မတိုင်မီ ပြီးစီးသွားခဲ့သော အရာများ။</p>
+            <div class="formula">Subject + had + V3 + Object</div>
+            <p class="example">ဥပမာ: The train had left before we arrived.</p>
+        </div>
+
+        <div class="card">
+            <h2>9. Future Perfect Tense</h2>
+            <p>အနာဂတ် သတ်မှတ်ချိန်တစ်ခု မတိုင်မီ ပြီးစီးမည့် အလုပ်များ။</p>
+            <div class="formula">Subject + will have + V3 + Object</div>
+            <p class="example">ဥပမာ: I will have passed Grade 8 by next year.</p>
+        </div>
+    </div>
+
+    <!-- Question Tab -->
+    <div id="question" class="tab-content">
+        <div class="card">
+            <h2>❓ Question</h2>
+            <p>မေးခွန်းနှင့် လေ့ကျင့်ခန်းများ မကြာမီ ထည့်သွင်းပေးပါမည်။</p>
+        </div>
+    </div>
+
+    <!-- Leaderboard Tab -->
+    <div id="leaderboard" class="tab-content">
+        <div class="card">
+            <h2>🏆 Leaderboard</h2>
+            <p>အမှတ်ပေးဇယားများကို ဤနေရာတွင် ကြည့်ရှုနိုင်ပါသည်။</p>
+        </div>
+    </div>
+
+    <!-- Account Tab -->
+    <div id="account" class="tab-content">
+        <div class="card">
+            <h2>👤 Account</h2>
+            <p>အသုံးပြုသူ: Grade 8 Student</p>
+        </div>
+    </div>
+
+    <!-- Bottom Navigation Bar -->
+    <div class="bottom-nav">
+        <button class="nav-item active" onclick="switchTab('home', this)">Home</button>
+        <button class="nav-item" onclick="switchTab('tense', this)">Tense</button>
+        <button class="nav-item" onclick="switchTab('question', this)">Question</button>
+        <button class="nav-item" onclick="switchTab('leaderboard', this)">Leaderboard</button>
+        <button class="nav-item" onclick="switchTab('account', this)">Account</button>
+    </div>
+
+    <script>
+        function switchTab(tabId, btn) {
+            const tabs = document.querySelectorAll('.tab-content');
+            tabs.forEach(tab => tab.classList.remove('active'));
+            
+            const buttons = document.querySelectorAll('.nav-item');
+            buttons.forEach(b => b.classList.remove('active'));
+            
+            document.getElementById(tabId).classList.add('active');
+            btn.classList.add('active');
+        }
+    </script>
+
+</body>
+          </html>
+          <!DOCTYPE html>
+<html lang="my">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study bot</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #0b0f19;
+            color: #fff;
+            margin: 0;
+            padding: 15px;
+            padding-bottom: 70px;
+        }
+        h1 {
+            font-size: 22px;
+            color: #38bdf8;
+            margin-bottom: 5px;
+        }
+        .subtitle {
+            color: #94a3b8;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        .card {
+            background: #111827;
+            padding: 15px;
+            margin-bottom: 12px;
+            border-radius: 12px;
+            border: 1px solid #1f2937;
+        }
+        h2 {
+            color: #38bdf8;
+            margin-top: 0;
+            font-size: 16px;
+        }
+        .formula {
+            background: #0b0f19;
+            padding: 8px 12px;
+            border-left: 4px solid #38bdf8;
+            font-weight: bold;
+            font-size: 13px;
+            margin: 8px 0;
+            color: #e2e8f0;
+        }
+        .example {
+            color: #9ca3af;
+            font-style: italic;
+            font-size: 13px;
+        }
+        /* Bottom Navigation Bar */
+        .bottom-nav {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: #111827;
+            display: flex;
+            justify-content: space-around;
+            padding: 10px 0;
+            border-top: 1px solid #1f2937;
+        }
+        .nav-item {
+            background: none;
+            border: none;
+            color: #94a3b8;
+            font-size: 12px;
+            font-weight: bold;
+            cursor: pointer;
+            padding: 5px;
+        }
+        .nav-item.active {
+            color: #38bdf8;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Study bot</h1>
+    <div class="subtitle">Study bot</div>
+
+    <!-- Home Tab -->
+    <div id="home" class="tab-content active">
+        <div class="card">
+            <h2>🏠 Home</h2>
+            <p>အင်္ဂလိပ်စာ Basic Tenses များကို လေ့လာရန် အောက်ပါ <b>Tense</b> ကို နှိပ်ပါ။</p>
+        </div>
+    </div>
+
+    <!-- Tense Tab -->
+    <div id="tense" class="tab-content">
+        <h2>📚 English Basic Tenses</h2>
+        
+        <div class="card">
+            <h2>1. Present Simple Tense</h2>
+            <p>အမြဲလုပ်လေ့ရှိသော၊ သဘာဝအတိုင်းဖြစ်ပျက်သော အရာများ။</p>
+            <div class="formula">Subject + V1 (s/es) + Object</div>
+            <p class="example">ဥပမာ: She speaks English very well.</p>
+        </div>
+
+        <div class="card">
+            <h2>2. Past Simple Tense</h2>
+            <p>အတိတ်ကာလက ဖြစ်ပျက်ပြီးဆုံးသွားသော အလုပ်များ။</p>
+            <div class="formula">Subject + V2 + Object</div>
+            <p class="example">ဥပမာ: He went to school yesterday.</p>
+        </div>
+
+        <div class="card">
+            <h2>3. Future Simple Tense</h2>
+            <p>အနာဂတ်တွင် ဖြစ်လာမည့် အရာများ။</p>
+            <div class="formula">Subject + will + V1 + Object</div>
+            <p class="example">ဥပမာ: I will study English tomorrow.</p>
+        </div>
+
+        <div class="card">
+            <h2>4. Present Continuous Tense</h2>
+            <p>ယခုလက်ရှိ ဖြစ်ဆဲဖြစ်သော အလုပ်များ။</p>
+            <div class="formula">Subject + is/am/are + V(ing) + Object</div>
+            <p class="example">ဥပမာ: They are playing football now.</p>
+        </div>
+
+        <div class="card">
+            <h2>5. Past Continuous Tense</h2>
+            <p>အတိတ်တွင် အချိန်တစ်ခုခု၌ ဖြစ်ဆဲဖြစ်သော အရာများ။</p>
+            <div class="formula">Subject + was/were + V(ing) + Object</div>
+            <p class="example">ဥပမာ: I was reading a book yesterday.</p>
+        </div>
+
+        <div class="card">
+            <h2>6. Future Continuous Tense</h2>
+            <p>အနာဂတ်တွင် ဆက်လက်ဖြစ်ပွားနေမည့် အလုပ်များ။</p>
+            <div class="formula">Subject + will be + V(ing) + Object</div>
+            <p class="example">ဥပမာ: She will be sleeping at this time tomorrow.</p>
+        </div>
+
+        <div class="card">
+            <h2>7. Present Perfect Tense</h2>
+            <p>ယခုတလောမှ ပြီးဆုံးသွားသော လုပ်ရပ်များ။</p>
+            <div class="formula">Subject + has/have + V3 + Object</div>
+            <p class="example">ဥပမာ: I have finished my homework.</p>
+        </div>
+
+        <div class="card">
+            <h2>8. Past Perfect Tense</h2>
+            <p>အတိတ်က အခြားအဖြစ်အပျက်တစ်ခု မတိုင်မီ ပြီးစီးသွားခဲ့သော အရာများ။</p>
+            <div class="formula">Subject + had + V3 + Object</div>
+            <p class="example">ဥပမာ: The train had left before we arrived.</p>
+        </div>
+
+        <div class="card">
+            <h2>9. Future Perfect Tense</h2>
+            <p>အနာဂတ် သတ်မှတ်ချိန်တစ်ခု မတိုင်မီ ပြီးစီးမည့် အလုပ်များ။</p>
+            <div class="formula">Subject + will have + V3 + Object</div>
+            <p class="example">ဥပမာ: I will have passed Grade 8 by next year.</p>
+        </div>
+    </div>
+
+    <!-- Question Tab -->
+    <div id="question" class="tab-content">
+        <div class="card">
+            <h2>❓ Question</h2>
+            <p>မေးခွန်းနှင့် လေ့ကျင့်ခန်းများ မကြာမီ ထည့်သွင်းပေးပါမည်။</p>
+        </div>
+    </div>
+
+    <!-- Leaderboard Tab -->
+    <div id="leaderboard" class="tab-content">
+        <div class="card">
+            <h2>🏆 Leaderboard</h2>
+            <p>အမှတ်ပေးဇယားများကို ဤနေရာတွင် ကြည့်ရှုနိုင်ပါသည်။</p>
+        </div>
+    </div>
+
+    <!-- Account Tab -->
+    <div id="account" class="tab-content">
+        <div class="card">
+            <h2>👤 Account</h2>
+            <p>အသုံးပြုသူ: Grade 8 Student</p>
+        </div>
+    </div>
+
+    <!-- Bottom Navigation Bar -->
+    <div class="bottom-nav">
+        <button class="nav-item active" onclick="switchTab('home', this)">Home</button>
+        <button class="nav-item" onclick="switchTab('tense', this)">Tense</button>
+        <button class="nav-item" onclick="switchTab('question', this)">Question</button>
+        <button class="nav-item" onclick="switchTab('leaderboard', this)">Leaderboard</button>
+        <button class="nav-item" onclick="switchTab('account', this)">Account</button>
+    </div>
+
+    <script>
+        function switchTab(tabId, btn) {
+            const tabs = document.querySelectorAll('.tab-content');
+            tabs.forEach(tab => tab.classList.remove('active'));
+            
+            const buttons = document.querySelectorAll('.nav-item');
+            buttons.forEach(b => b.classList.remove('active'));
+            
+            document.getElementById(tabId).classList.add('active');
+            btn.classList.add('active');
+        }
+    </script>
+
+</body>
+</html>
